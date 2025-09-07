@@ -1,0 +1,66 @@
+@{
+ViewData["Title"] = "Our Menu";
+}
+
+@model List<BirdAndBrewMVC.Models.MenuItem>
+
+
+<div class="text-center">
+    <h1 class="display-4 mt-4">Our Menu</h1>
+</div>
+
+
+<table class="table mt-4">
+   
+    <thead>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            ImageURL (placeholder)
+        </th>
+        <th>
+            Is Popular (placeholder)
+        </th>
+        
+    </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var menuItem in Model)
+        {
+            <tr>
+                <td>
+                    @menuItem.Name
+                </td>
+                <td>
+                    @menuItem.Description
+                </td>
+                <td>
+                    @menuItem.Price
+                </td>
+                <td>
+                    @menuItem.Image
+                </td>
+                <td>
+                    @menuItem.isPopular
+                </td>
+            </tr>
+        }
+    
+    </tbody>
+    
+</table>
+
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_MenuItemCard", item)
+}
