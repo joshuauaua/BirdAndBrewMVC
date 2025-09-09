@@ -28,3 +28,4 @@
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndBrewMVC.pdb
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndBrewMVC.genruntimeconfig.cache
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/ref/BirdAndBrewMVC.dll
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndBrewMVC.sourcelink.json

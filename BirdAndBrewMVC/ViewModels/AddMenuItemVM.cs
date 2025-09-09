@@ -4,7 +4,6 @@ namespace BirdAndBrewMVC.ViewModels;
 
 public class AddMenuItemVM
 {
-    
     [Display(Name ="Menu Item Name")]
     [Required, StringLength(100)]
     public string Name { get; set; }
@@ -21,6 +20,5 @@ public class AddMenuItemVM
     
     [Display(Name="Popular Dish?")]
     public bool? isPopular { get; set; }
-        
     
 }

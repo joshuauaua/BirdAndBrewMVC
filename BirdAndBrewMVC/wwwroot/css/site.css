@@ -20,3 +20,22 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+.header-section {
+  background: url("https://youshouldgohere.com/wp-content/uploads/2017/04/DSC03184.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh; /* adjust for how tall you want your header */
+  position: relative;
+}
+
+/* Optional: dark overlay for readability */
+.header-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* adjust opacity */
+}
