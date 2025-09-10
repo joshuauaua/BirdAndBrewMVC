@@ -13,27 +13,23 @@ public class AdminMenuController : Controller
     {
         _client = clientFactory.CreateClient("BirdAndBrewApi");
     }
-
-
-    public IActionResult Index()
-    {
-        return View();
-    }
     
     
-    public async Task <IActionResult> Read()
+    public async Task <IActionResult> Index()
     {
-        var menuItems = await _client.GetFromJsonAsync<List<MenuItem>>("api/menuitem");
+        var menuItems = await _client.GetFromJsonAsync<List<MenuItem>>("menuitem");
         return  View(menuItems);
     }
     
+    
+    //Get the form
     [HttpGet]
     public IActionResult Create()
     {
         return View();
     }
     
-    
+    //Send the inputs of the form
     [HttpPost]
     public async Task<IActionResult> Create(AddMenuItemVM menuItem)
     {
@@ -44,15 +40,30 @@ public class AdminMenuController : Controller
         
         var response= await _client.PostAsJsonAsync("menuitem", menuItem);
 
+        Console.WriteLine(response);
+
         return RedirectToAction("Index");
-
     }
-
-
     
-    public IActionResult Update()
+    
+    [HttpGet]
+    public async Task<IActionResult> Update(int id)
     {
-        return View();
+
+        var item = await _client.GetFromJsonAsync<MenuItem>($"menuitem/{id}");
+        
+        return View(item);
+    }
+    
+    [HttpPost]
+    public async Task <IActionResult> Update(int id,  MenuItem model)
+    {
+        if (!ModelState.IsValid)
+            return View(model);
+
+        await _client.PutAsJsonAsync($"menuitem/{id}", model);
+        
+        return RedirectToAction("Index");
     }
 
     

@@ -4,6 +4,9 @@ namespace BirdAndBrewMVC.ViewModels;
 
 public class AddMenuItemVM
 {
+    
+    public int Id { get; set; }
+    
     [Display(Name ="Menu Item Name")]
     [Required, StringLength(100)]
     public string Name { get; set; }
@@ -16,9 +19,9 @@ public class AddMenuItemVM
     public int Price { get; set; }
     
     [Display(Name ="Link to image")]
-    public string? ImageUrl { get; set; }
+    public string? Image { get; set; }
     
     [Display(Name="Popular Dish?")]
-    public bool? isPopular { get; set; }
+    public bool IsPopular { get; set; }
     
 }

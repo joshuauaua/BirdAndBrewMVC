@@ -13,7 +13,7 @@ public class Program
         //ADD Http client so that it can connect to api
         builder.Services.AddHttpClient("BirdAndBrewApi", client =>
         {
-            client.BaseAddress = new Uri("http://localhost:5240/api");
+            client.BaseAddress = new Uri("http://localhost:5240/api/");
         });
 
         var app = builder.Build();

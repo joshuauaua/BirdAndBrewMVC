@@ -1,20 +1,26 @@
 using BirdAndBrewMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+
 namespace BirdAndBrewMVC.Controllers;
 
-public class MenuItemsController : Controller
-{ 
+public class AdminTablesController : Controller
+{
     private readonly HttpClient _client;
-    
-    public MenuItemsController(IHttpClientFactory clientFactory)
+
+    public AdminTablesController(IHttpClientFactory clientFactory)
     {
         _client = clientFactory.CreateClient("BirdAndBrewApi");
     }
     
     public async Task<IActionResult> Index()
     {
-        var menuItems = await _client.GetFromJsonAsync<List<MenuItem>>("menuitem");
-        return View(menuItems);    
+        var tables = await _client.GetFromJsonAsync<List<Table>>("tables");
+
+
+        Console.WriteLine(tables);
+        
+        return View(tables);
     }
+    
     
 }
