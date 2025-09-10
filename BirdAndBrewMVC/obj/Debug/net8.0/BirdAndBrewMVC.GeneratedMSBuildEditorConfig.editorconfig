@@ -36,12 +36,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTG9nSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/AdminCustomers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5DdXN0b21lcnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/AdminMenu/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5NZW51L0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/AdminMenu/Read.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5NZW51L1JlYWQuY3NodG1s
+[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/AdminMenu/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5NZW51L0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/AdminMenu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5NZW51L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/AdminMenu/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5NZW51L1VwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/AdminTables/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5UYWJsZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/Bookings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZ3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/Home/About.cshtml]
@@ -54,10 +74,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/MenuItems/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudUl0ZW1zL0FkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/Shared/_MenuItemCard.cshtml]
