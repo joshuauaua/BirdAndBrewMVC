@@ -9,65 +9,40 @@
 
   <div class="row">
     <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Your Information</h4>
+      <h4 class="mb-3">Your Booking</h4>
       <form class="needs-validation" novalidate="">
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="firstName">First name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+            <label for="date">What Date Would You Like to Book?</label>
+            <input type="date" class="form-control" id="date" placeholder="" value="" required="">
             <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="lastName">Last name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-            <div class="invalid-feedback">
-              Valid last name is required.
+              Valid Date is Required
             </div>
           </div>
         </div>
-
-
-        <div class="mb-3">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com" required="">
+        <div class="col-md-6 mb-3">
+          <label for="reservationStartTime">What Time Would You Like to Book?</label>
+          <input type="time" class="form-control" id="reservationStartTime" placeholder="" value="" required="">
           <div class="invalid-feedback">
-            Please enter a valid email address
+            Valid Date is Required
           </div>
         </div>
 
         <div class="col-md-6 mb-3">
-          <label for="phone-number">Phone Number</label>
-          <input type="tel" class="form-control" id="phone-number" placeholder="" required="">
+          <label for="">How Many People Will be Joining?</label>
+          <input type="number" class="form-control" id="reservationStartTime" placeholder="" value="" required="">
           <div class="invalid-feedback">
-            Please enter a valid phone number
+            Valid Time is Required
           </div>
         </div>
 
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" asp-action="Create" asp-controller="Bookings" type="submit" >Next</button>
+        <a class="btn btn-primary btn-lg btn-block" asp-action="Create" asp-controller="Bookings" >Next</a>
       </form>
     </div>
   </div>
       
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

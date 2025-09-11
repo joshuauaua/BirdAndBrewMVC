@@ -38,18 +38,16 @@ public class AdminMenuController : Controller
             return View(menuItem);
         }
         
-        var response= await _client.PostAsJsonAsync("menuitem", menuItem);
-
-        Console.WriteLine(response);
-
+        await _client.PostAsJsonAsync("menuitem", menuItem);
+        
         return RedirectToAction("Index");
     }
     
     
+    //First get by ID
     [HttpGet]
     public async Task<IActionResult> Update(int id)
     {
-
         var item = await _client.GetFromJsonAsync<MenuItem>($"menuitem/{id}");
         
         return View(item);
@@ -67,11 +65,32 @@ public class AdminMenuController : Controller
     }
 
     
-
-    public IActionResult Delete()
+    //First get by ID
+    [HttpGet]
+    public async Task<IActionResult> Delete(int id)
     {
-        return View();
+        var item = await _client.GetFromJsonAsync<MenuItem>($"menuitem/{id}");
+
+        return View(item);
     }
+    
+    [HttpPost]
+    public async Task<IActionResult> DeletePost(int id)
+    {
+        
+        var response = await _client.DeleteAsync($"menuitem?id={id}");
+        
+        if (!response.IsSuccessStatusCode)
+        {
+            // Optional: handle failure
+            ModelState.AddModelError(string.Empty, "Failed to delete the menu item.");
+            return RedirectToAction("Index");
+        }
+
+        
+        return RedirectToAction("Index");    }
+    
+    
     
     
 }

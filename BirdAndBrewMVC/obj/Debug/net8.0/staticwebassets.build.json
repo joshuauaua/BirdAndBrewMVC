@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LEAjDhZxQF/FmR8xVJLq39cKJ8YNLnUCy/CMiNCYhnM=",
+  "Hash": "jraHAs1pwVt98530DDugR5bx2ZjsB3xvyw1K3uP0ufo=",
   "Source": "BirdAndBrewMVC",
   "BasePath": "_content/BirdAndBrewMVC",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/wwwroot/logo.svg",
+      "SourceId": "BirdAndBrewMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/wwwroot/",
+      "BasePath": "_content/BirdAndBrewMVC",
+      "RelativePath": "logo.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/logo.svg"
     }
   ]
 }

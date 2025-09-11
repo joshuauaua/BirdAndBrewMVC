@@ -16,6 +16,11 @@ public class BookingsController : Controller
     {
         return View();
     }
+
+    public IActionResult Create()
+    {
+        return View();
+    }
     
     
 }

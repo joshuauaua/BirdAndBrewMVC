@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/wwwroot/logo.svg",
+      "PackagePath": "staticwebassets/logo.svg"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BirdAndBrewMVC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
