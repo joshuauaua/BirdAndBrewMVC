@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BirdAndBrewMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+137e940bea676c349898d966c592e2bb5f760276")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eea88b83e07d68ab6dd06949e854ae38583b4fbf")]
 [assembly: System.Reflection.AssemblyProductAttribute("BirdAndBrewMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BirdAndBrewMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

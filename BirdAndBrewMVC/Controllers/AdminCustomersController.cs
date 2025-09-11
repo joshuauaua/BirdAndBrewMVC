@@ -15,10 +15,20 @@ public class AdminCustomersController : Controller
     }
 
 
-    public IActionResult Index()
+    
+    //Get all
+    public async Task <IActionResult> Index()
     {
-        return View();
+        var customers = await _client.GetFromJsonAsync<List<Customer>>("customers");
+        return View(customers);
     }
+    
+    
+    
+    
+    
+    
+    
     
     
 }
