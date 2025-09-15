@@ -31,7 +31,7 @@ public class AdminMenuController : Controller
     
     //Send the inputs of the form
     [HttpPost]
-    public async Task<IActionResult> Create(AddMenuItemVM menuItem)
+    public async Task<IActionResult> Create(CreateMenuItemVM menuItem)
     {
         if (!ModelState.IsValid)
         {
@@ -54,12 +54,12 @@ public class AdminMenuController : Controller
     }
     
     [HttpPost]
-    public async Task <IActionResult> Update(int id,  MenuItem model)
+    public async Task <IActionResult> Update(int id,  MenuItem item)
     {
         if (!ModelState.IsValid)
-            return View(model);
+            return View(item);
 
-        await _client.PutAsJsonAsync($"menuitem/{id}", model);
+        await _client.PutAsJsonAsync($"menuitem/{id}", item);
         
         return RedirectToAction("Index");
     }
@@ -86,7 +86,6 @@ public class AdminMenuController : Controller
             ModelState.AddModelError(string.Empty, "Failed to delete the menu item.");
             return RedirectToAction("Index");
         }
-
         
         return RedirectToAction("Index");    }
     

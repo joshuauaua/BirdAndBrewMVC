@@ -1,0 +1,60 @@
+@model BirdAndBrewMVC.Models.Reservation
+
+<table class="table mt-4">
+    <thead>
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Time
+        </th>
+        <th>
+            Customer ID
+        </th>
+        <th>
+            Table ID
+        </th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr>
+        <td>
+            @Model.Id
+        </td>
+        <td>
+            @Model.ReservationDate
+        </td>
+        <td>
+            @Model.ReservationStartTime
+        </td>
+        <td>
+            @Model.FK_CustomerId
+        </td>
+        <td>
+            @Model.Fk_TableId
+        </td>
+    </tr>
+
+    <tr>
+        <div>
+            <form method="post" asp-controller="AdminReservations" asp-action="DeletePost">
+                <input type="hidden" asp-for="Id" name="id" />
+
+                <H4>Are you sure you want to delete this reservation? This action cannot be undone</H4>
+                <button type="submit" class="btn btn-primary mt-2">Delete</button>
+                
+                <a asp-controller="AdminReservations" asp-action="Index" class="btn btn-secondary mt-2">Cancel</a>
+            </form>
+        </div>
+    </tr>
+
+
+    </tbody>
+
+</table>

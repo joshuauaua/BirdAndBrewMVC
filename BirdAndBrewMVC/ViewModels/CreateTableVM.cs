@@ -2,9 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BirdAndBrewMVC.ViewModels;
 
-public class AddTableVM
+public class CreateTableVM
 {
-    
     public int Id { get; set; }
     
     [Required]

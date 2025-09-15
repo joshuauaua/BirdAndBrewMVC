@@ -29,3 +29,10 @@
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndBrewMVC.genruntimeconfig.cache
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/ref/BirdAndBrewMVC.dll
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndBrewMVC.sourcelink.json
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndBrewMVC.csproj.AssemblyReference.cache
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndB.2FEBF798.Up2Date

@@ -1,0 +1,70 @@
+@model BirdAndBrewMVC.Models.Customer
+
+
+
+
+<table class="table mt-4">
+    <thead>
+    <tr>  
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            ImageURL
+        </th>
+        <th>
+            Is Popular
+        </th>
+        
+
+
+    </tr>
+    </thead>
+
+    <tbody>
+    
+    <tr>
+        <td>
+            @Model.Id
+        </td>
+        <td>
+            @Model.FirstName
+        </td>
+        <td>
+            @Model.LastName
+        </td>
+        <td>
+            @Model.EmailAddress
+        </td>
+        <td>
+            @Model.PhoneNumber
+        </td>
+       
+    </tr>
+    
+    <tr>
+        <div>
+            <form method="post" asp-controller="AdminCustomers" asp-action="DeletePost">
+                <input type="hidden" asp-for="Id" name="id" />
+                
+                
+                <H4>Are you sure you want to delete this customer? This action cannot be undone</H4>
+                <button type="submit" class="btn btn-primary mt-2">Delete</button>
+                <a asp-controller="AdminCustomers" asp-action="Index" class="btn btn-secondary mt-2">Cancel</a>
+            </form>
+        </div>
+    </tr>
+
+
+    </tbody>
+
+</table>

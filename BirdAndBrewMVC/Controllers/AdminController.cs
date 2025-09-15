@@ -18,12 +18,7 @@ public class AdminController : Controller
     {
         return View();
     }
-
-    public IActionResult LogIn()
-    {
-        return View();
-    }
-
+    
     public IActionResult Dashboard()
     {
         return View();

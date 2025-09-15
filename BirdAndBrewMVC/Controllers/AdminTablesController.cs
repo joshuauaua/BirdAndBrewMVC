@@ -19,15 +19,16 @@ public class AdminTablesController : Controller
         
         return View(tables);
     }
-
+    
+    //CREATE TABLE
     [HttpGet]
-    public async Task<IActionResult> Create()
+    public IActionResult Create()
     {
         return View();
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(AddTableVM table)
+    public async Task<IActionResult> Create(CreateTableVM table)
     {
         if (!ModelState.IsValid)
             return View(table);
@@ -36,5 +37,64 @@ public class AdminTablesController : Controller
         
         return RedirectToAction("Index");
     }
+    
+    
+    //DELETE TABLE
+    //First get by ID
+    [HttpGet]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var table = await _client.GetFromJsonAsync<Table>($"tables/{id}");
+
+        
+        return View(table);
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> DeletePost(int id)
+    {
+        
+        var response = await _client.DeleteAsync($"tables?id={id}");
+        
+        if (!response.IsSuccessStatusCode)
+        {
+            // Optional: handle failure
+            ModelState.AddModelError(string.Empty, "Failed to delete the table.");
+            return RedirectToAction("Index");
+        }
+
+        
+        return RedirectToAction("Index");    }
+
+    
+    //Edit TABLE
+    //First get by ID
+    [HttpGet]
+    public async Task<IActionResult> Edit(int id)
+    {
+        var table = await _client.GetFromJsonAsync<Table>($"tables/{id}");
+
+        Console.WriteLine(table);
+        
+        return View(table);
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> EditPost(int id, ReadTableVM table)
+    {
+        
+        var response = await _client.PutAsJsonAsync($"tables/{id}", table);
+
+        
+        if (!response.IsSuccessStatusCode)
+        {
+            // Optional: handle failure
+            ModelState.AddModelError(string.Empty, "Failed to edit the table.");
+            return RedirectToAction("Index");
+        }
+        
+        return RedirectToAction("Index");    }
+
+
     
 }
