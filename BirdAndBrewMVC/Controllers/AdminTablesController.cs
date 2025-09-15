@@ -70,17 +70,15 @@ public class AdminTablesController : Controller
     //Edit TABLE
     //First get by ID
     [HttpGet]
-    public async Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> Update(int id)
     {
         var table = await _client.GetFromJsonAsync<Table>($"tables/{id}");
-
-        Console.WriteLine(table);
         
         return View(table);
     }
     
     [HttpPost]
-    public async Task<IActionResult> EditPost(int id, ReadTableVM table)
+    public async Task<IActionResult> UpdatePost(int id, ReadTableVM table)
     {
         
         var response = await _client.PutAsJsonAsync($"tables/{id}", table);

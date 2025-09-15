@@ -74,5 +74,35 @@ public class AdminReservationsController : Controller
         
         return RedirectToAction("Index");  
     }
+
+
+
+    [HttpGet]
+    public async Task<IActionResult> Update(int id)
+    {
+        var reservation = await _client.GetFromJsonAsync<Reservation>($"reservations/{id}");
+        
+        return View(reservation);
+
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> UpdatePost(int id, CreateReservationVM reservationVM)
+    {
+        var response = await _client.PutAsJsonAsync($"reservations/{id}", reservationVM);
+        
+        if (!response.IsSuccessStatusCode)
+        {
+            // Optional: handle failure
+            ModelState.AddModelError(string.Empty, "Failed to edit the reservation.");
+            return RedirectToAction("Index");
+        }
+        
+        return RedirectToAction("Index");
+        
+    }
+
+    
+    
     
 }
