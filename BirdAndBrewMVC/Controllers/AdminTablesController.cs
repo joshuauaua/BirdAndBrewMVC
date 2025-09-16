@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using BirdAndBrewMVC.Models;
 using BirdAndBrewMVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +16,24 @@ public class AdminTablesController : Controller
     
     public async Task<IActionResult> Index()
     {
-        var tables = await _client.GetFromJsonAsync<List<Table>>("tables");
+
+        var token = HttpContext.Request.Cookies["jwtToken"];
+        
+        if (string.IsNullOrEmpty(token))
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        var response = await _client.GetAsync("/tables");
+
+      if (!response.IsSuccessStatusCode)
+        {
+            return Unauthorized();
+        }
+
+        var tables = await response.Content.ReadFromJsonAsync<List<Table>>();
         
         return View(tables);
     }

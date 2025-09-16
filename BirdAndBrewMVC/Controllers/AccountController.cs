@@ -1,4 +1,5 @@
 using System.IdentityModel.Tokens.Jwt;
+using System.Text.Json;
 using BirdAndBrewMVC.Models;
 using BirdAndBrewMVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +27,7 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(LoginVM loginUser)
     {
-        var response = await _client.PostAsJsonAsync("auth/login", loginUser);
+        var response = await _client.PostAsJsonAsync("auth/Login", loginUser);
 
         if (!response.IsSuccessStatusCode)
         {
@@ -49,5 +50,15 @@ public class AccountController : Controller
         
         return RedirectToAction("Dashboard", "Admin");
     }
+
+
+
+    public async Task<IActionResult> Logout()
+    {
+        HttpContext.Response.Cookies.Delete("jwtToken");
+        return RedirectToAction("Login", "Account");
+
+    }
+    
     
 }
