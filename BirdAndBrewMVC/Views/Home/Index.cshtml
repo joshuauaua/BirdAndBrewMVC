@@ -6,11 +6,16 @@
 
 <header class="header-section text-secondary px-4 py-5 text-center">
   <div class="py-5">
-    <h1 class="display-5 fw-bold text-white">Bird & Brew</h1>
-    <div class="col-lg-6 mx-auto text-white">
+    <img class="d-block mx-auto mb-4"
+         src="@Url.Content("~/bird.svg")"
+         alt="Logo image"
+         width="272"
+         height="272" />
+    <h1 class="display-5 fw-bold text-black">Bird & Brew</h1>
+    <div class="col-lg-6 mx-auto text-black">
       <p class="fs-5 mb-4">Bird & Brew was born from a simple idea: that great food and great beer are best enjoyed together, without pretense.
         Inspired by classic comfort food and the growing craft beer scene, we set out to create a place where the humble chicken sandwich could shine as the star of the menu. </p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Book a Table</button>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <a type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"  asp-controller="Bookings" asp-action="Index">Book a Table</a>
       </div>
     </div>
   </div>

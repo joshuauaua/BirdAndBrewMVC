@@ -9,69 +9,74 @@
     <link rel="stylesheet" href="~/BirdAndBrewMVC.styles.css" asp-append-version="true"/>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Bird & Brew</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index", "MenuItems")">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index", "Bookings")">Book</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("About", "Home")">About</a>
-                    </li>
-                </ul>
-            </div>
-            
-            @{
-                var hasJwt = Context.Request.Cookies.ContainsKey("jwtToken");
-            }
-            
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <div class="container-fluid">
+
+        <!-- Left: Logo -->
+        <a class="navbar-brand" href="@Url.Action("Index", "Home")">Bird & Brew</a>
+
+        <!-- Hamburger Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Center: Nav Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "MenuItems")">Our Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Bookings")">Book a Table</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("About", "Home")">Our Story</a></li>
+            </ul>
+        </div>
+
+        <!-- Right: Auth Section -->
+        <div class="d-flex align-items-center">
             @if (User?.Identity?.IsAuthenticated == true)
             {
-                <span> @User.FindFirst("email").Value</span>
-                <span class="m-2">@User.FindFirst("unique_name").Value | @User.FindFirst("role")</span>
-            }
-            
-            
-            @if (hasJwt)
-            {
-                <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
-                    <button type="submit" class="btn btn-danger"><i class="bi bi-box-arrow-right"></i>Logout</button>
-                </form>
-            }
+            <span class="me-3 text-white">
+                    👤 @User.FindFirst("email")?.Value
+                </span>
+            <span class="me-3 text-white">
+                    @User.FindFirst("unique_name")?.Value | @User.FindFirst("role")?.Value
+                </span>
 
+            <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                <button type="submit" class="btn btn-outline-light">
+                    Logout
+                </button>
+            </form>
+            }
             else
             {
-                <a asp-controller="Account" asp-action="Login" class="btn btn-primary"> <i class="bi bi-box-arrow-right"></i>Login</a>
+            <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light">
+                <i class="bi bi-box-arrow-right"></i> Login
+            </a>
             }
-            
         </div>
-    </nav>
-</header>
+
+    </div>
+</nav>
+
 
 <main role="main" class="pb-3">
     @RenderBody()
 </main>
 
 
-<footer class="py-3 my-4 "> <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a  asp-controller="Home" asp-action="Index" class="nav-link px-2 text-body-secondary">Home</a></li> 
-        <li class="nav-item"><a asp-controller="Home" asp-action="About" class="nav-link px-2 text-body-secondary">About</a></li> 
-        <li class="nav-item"><a asp-controller="MenuItems" asp-action="Index" class="nav-link px-2 text-body-secondary">Menu</a></li>
-        <li class="nav-item"><a asp-controller="Home" asp-action="Privacy" class="nav-link px-2 text-body-secondary">Privacy</a></li>
-        <li class="nav-item"><a asp-controller="Admin" asp-action="Dashboard" class="nav-link px-2 text-body-secondary">Administrator</a></li>
+<footer class="py-3 bg-dark px-3 ">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link text-white">Home</a></li>
+        <li class="nav-item"><a asp-controller="Home" asp-action="About" class="nav-link text-white">Our Story</a></li>
+        <li class="nav-item"><a asp-controller="MenuItems" asp-action="Index" class="nav-link text-white">Our Menu</a></li>
+        <li class="nav-item"><a asp-controller="Bookings" asp-action="Index" class="nav-link text-white">Book a Table</a></li>
+        <li class="nav-item"><a asp-controller="Home" asp-action="Privacy" class="nav-link text-white">Privacy</a></li>
+        <li class="nav-item"><a asp-controller="Admin" asp-action="Dashboard" class="nav-link text-white">Administrator</a></li>
     </ul>
-    <p class="text-center text-body-secondary">© Bird & Brew 2025</p> </footer>
-
+    <p class="text-center text-body-secondary text-white">© Bird & Brew 2025</p> 
+    </footer>
 
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -80,5 +85,4 @@
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-
 

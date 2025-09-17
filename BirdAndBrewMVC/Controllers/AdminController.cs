@@ -1,5 +1,6 @@
 using BirdAndBrewMVC.Models;
 using BirdAndBrewMVC.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BirdAndBrewMVC.Controllers;
@@ -14,11 +15,7 @@ public class AdminController : Controller
         _client = clientFactory.CreateClient("BirdAndBrewApi");
     }
     
-    public IActionResult Index()
-    {
-        return View();
-    }
-    
+    [Authorize]
     public IActionResult Dashboard()
     {
         return View();

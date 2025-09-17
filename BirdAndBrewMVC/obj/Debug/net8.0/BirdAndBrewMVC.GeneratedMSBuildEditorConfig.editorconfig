@@ -36,10 +36,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/Admin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/Admin/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTG9nSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -134,10 +130,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/Tables/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFibGVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/Views/_ViewImports.cshtml]

@@ -77,7 +77,7 @@ public class AccountController : Controller
         
         HttpContext.Response.Cookies.Delete("jwtToken");
         
-        return RedirectToAction("Login", "Account");
+        return RedirectToAction("Index", "Home");
 
     }
     
