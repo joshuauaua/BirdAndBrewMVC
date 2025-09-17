@@ -1,11 +1,13 @@
 <body class="bg-light">
 
 <div class="container">
+
+  <header class="header-section text-secondary px-4 py-5 text-center">
   <div class="py-5 text-center">
-    <img class="d-block mx-auto mb-4" src="/book.png" alt="" width="272" height="272">
-    <h2>Book a Table</h2>
+    <img class="d-block mx-auto mb-4" src="~/book.svg" alt="" width="372" height="372">
     <p class="lead">You're wanting to book a table with us. Great! Our chicken sandwiches are crunchy, our beer is cold and our seats go fast. So make sure to fill in all the details below and a confirmation of your booking will be sent to you!</p>
   </div>
+  </header>
 
   <div class="row">
     <div class="col-md-8 order-md-1">
@@ -46,11 +48,11 @@
         </div>
 
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" asp-action="Create" asp-controller="Bookings" type="submit" >Next</button>
+        <button class="btn btn-primary btn-lg btn-block" asp-action="Create" asp-controller="Bookings" type="submit">Next</button>
       </form>
     </div>
   </div>
-      
+
 </div>
 
 

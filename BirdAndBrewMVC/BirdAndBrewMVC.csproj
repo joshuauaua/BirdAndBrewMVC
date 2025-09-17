@@ -20,27 +20,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\..\..\..\Downloads\Black and White Simple Illustration Coffeeshop Logo \about.svg">
-        <Link>wwwroot\about.svg</Link>
-      </Content>
-      <Content Include="..\..\..\..\Downloads\Black and White Simple Illustration Coffeeshop Logo \bird.svg">
-        <Link>wwwroot\bird.svg</Link>
-      </Content>
-      <Content Include="..\..\..\..\Downloads\Black and White Simple Illustration Coffeeshop Logo \book.svg">
-        <Link>wwwroot\book.svg</Link>
-      </Content>
-      <Content Include="..\..\..\..\Downloads\Black and White Simple Illustration Coffeeshop Logo \logo.svg">
-        <Link>wwwroot\logo.svg</Link>
-      </Content>
-      <Content Include="..\..\..\..\Downloads\Black and White Simple Illustration Coffeeshop Logo \menu.svg">
-        <Link>wwwroot\menu.svg</Link>
-      </Content>
-      <Content Include="..\..\..\..\Downloads\favicon.svg">
-        <Link>wwwroot\favicon.svg</Link>
-      </Content>
-    </ItemGroup>
-
-    <ItemGroup>
       <Folder Include="wwwroot\assets\" />
     </ItemGroup>
 
