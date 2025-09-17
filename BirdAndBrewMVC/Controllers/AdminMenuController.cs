@@ -1,5 +1,6 @@
 using BirdAndBrewMVC.Models;
 using BirdAndBrewMVC.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BirdAndBrewMVC.Controllers;
@@ -14,7 +15,7 @@ public class AdminMenuController : Controller
         _client = clientFactory.CreateClient("BirdAndBrewApi");
     }
     
-    
+    [Authorize]
     public async Task <IActionResult> Index()
     {
         var menuItems = await _client.GetFromJsonAsync<List<MenuItem>>("menuitem");
@@ -22,6 +23,7 @@ public class AdminMenuController : Controller
     }
     
     
+    [Authorize]
     //Get the form
     [HttpGet]
     public IActionResult Create()
@@ -29,6 +31,7 @@ public class AdminMenuController : Controller
         return View();
     }
     
+    [Authorize]
     //Send the inputs of the form
     [HttpPost]
     public async Task<IActionResult> Create(CreateMenuItemVM menuItem)
@@ -43,7 +46,7 @@ public class AdminMenuController : Controller
         return RedirectToAction("Index");
     }
     
-    
+    [Authorize]
     //First get by ID
     [HttpGet]
     public async Task<IActionResult> Update(int id)
@@ -53,6 +56,7 @@ public class AdminMenuController : Controller
         return View(item);
     }
     
+    [Authorize]
     [HttpPost]
     public async Task <IActionResult> Update(int id,  MenuItem item)
     {
@@ -64,7 +68,7 @@ public class AdminMenuController : Controller
         return RedirectToAction("Index");
     }
 
-    
+    [Authorize]
     //First get by ID
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
@@ -74,6 +78,8 @@ public class AdminMenuController : Controller
         return View(item);
     }
     
+    
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> DeletePost(int id)
     {

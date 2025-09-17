@@ -15,11 +15,6 @@
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndBrewMVC.RazorAssemblyInfo.cs
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets.build.json
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets.development.json
-/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets/msbuild.BirdAndBrewMVC.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets/msbuild.build.BirdAndBrewMVC.props
-/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BirdAndBrewMVC.props
-/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BirdAndBrewMVC.props
-/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/scopedcss/bundle/BirdAndBrewMVC.styles.css
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/scopedcss/projectbundle/BirdAndBrewMVC.bundle.scp.css
@@ -36,3 +31,10 @@
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndBrewMVC.csproj.AssemblyReference.cache
 /Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/BirdAndB.2FEBF798.Up2Date
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/bin/Debug/net8.0/BirdAndBrewMVC.staticwebassets.endpoints.json
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/joshuang/Desktop/Programming/BirdAndBrewMVC/BirdAndBrewMVC/obj/Debug/net8.0/staticwebassets.build.endpoints.json

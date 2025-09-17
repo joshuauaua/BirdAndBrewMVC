@@ -1,6 +1,7 @@
 using System.Net.Http.Headers;
 using BirdAndBrewMVC.Models;
 using BirdAndBrewMVC.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BirdAndBrewMVC.Controllers;
@@ -25,26 +26,21 @@ public class AdminTablesController : Controller
         }
 
         _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-        var response = await _client.GetAsync("/tables");
-
-      if (!response.IsSuccessStatusCode)
-        {
-            return Unauthorized();
-        }
-
-        var tables = await response.Content.ReadFromJsonAsync<List<Table>>();
+        
+        var tables = await _client.GetFromJsonAsync<List<Table>>("tables");
         
         return View(tables);
     }
     
     //CREATE TABLE
+    [Authorize]
     [HttpGet]
     public IActionResult Create()
     {
         return View();
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> Create(CreateTableVM table)
     {
@@ -59,6 +55,7 @@ public class AdminTablesController : Controller
     
     //DELETE TABLE
     //First get by ID
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
     {
@@ -68,6 +65,7 @@ public class AdminTablesController : Controller
         return View(table);
     }
     
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> DeletePost(int id)
     {
@@ -87,6 +85,7 @@ public class AdminTablesController : Controller
     
     //Edit TABLE
     //First get by ID
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Update(int id)
     {
@@ -95,6 +94,7 @@ public class AdminTablesController : Controller
         return View(table);
     }
     
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> UpdatePost(int id, ReadTableVM table)
     {

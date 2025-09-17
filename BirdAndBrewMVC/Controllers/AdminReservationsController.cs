@@ -1,5 +1,6 @@
 using BirdAndBrewMVC.Models;
 using BirdAndBrewMVC.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BirdAndBrewMVC.Controllers;
@@ -14,7 +15,7 @@ public class AdminReservationsController : Controller
         _client = clientFactory.CreateClient("BirdAndBrewApi");
     }
     
-    
+    [Authorize]
     //GET ALL BOOKINGS
     public async Task<IActionResult> Index()
     {
@@ -26,13 +27,16 @@ public class AdminReservationsController : Controller
     
     //CREATE A BOOKING
     //Get first
+    [Authorize]
     [HttpGet]
     public IActionResult Create()
     {
         return View();
     }
     
+    
     //POST
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> Create(CreateReservationVM reservationVM)
     {
@@ -46,11 +50,9 @@ public class AdminReservationsController : Controller
     }
     
     
-    
-    
     //DELETE BOOKING
-    
     //GET FIRST
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Delete(int Id)
     {
@@ -58,7 +60,8 @@ public class AdminReservationsController : Controller
         
         return View(reservation);
     }
-
+    
+    [Authorize]
     //Delete 
     [HttpPost]
     public async Task<IActionResult> DeletePost(int Id)
@@ -76,7 +79,7 @@ public class AdminReservationsController : Controller
     }
 
 
-
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Update(int id)
     {
@@ -85,7 +88,8 @@ public class AdminReservationsController : Controller
         return View(reservation);
 
     }
-
+    
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> UpdatePost(int id, CreateReservationVM reservationVM)
     {

@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 namespace BirdAndBrewMVC;
 
 public class Program
@@ -16,6 +18,16 @@ public class Program
             client.BaseAddress = new Uri("http://localhost:5240/api/");
         });
 
+
+        builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(o =>
+            {
+                o.LoginPath = "/Account/Login";
+            });
+
+        builder.Services.AddAuthorization();
+        
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -31,6 +43,7 @@ public class Program
 
         app.UseRouting();
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllerRoute(

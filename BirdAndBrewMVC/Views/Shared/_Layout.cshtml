@@ -35,6 +35,13 @@
                 var hasJwt = Context.Request.Cookies.ContainsKey("jwtToken");
             }
             
+            @if (User?.Identity?.IsAuthenticated == true)
+            {
+                <span> @User.FindFirst("email").Value</span>
+                <span class="m-2">@User.FindFirst("unique_name").Value | @User.FindFirst("role")</span>
+            }
+            
+            
             @if (hasJwt)
             {
                 <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
