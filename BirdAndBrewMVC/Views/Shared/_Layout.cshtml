@@ -4,9 +4,33 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - BirdAndBrewMVC</title>
+    
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="@(ViewData["Description"] ?? "Bird & Brew serves delicious chicken sandwiches and craft beer in a cozy atmosphere.")">
+    <meta name="keywords" content="@(ViewData["Keywords"] ?? "chicken sandwich, craft beer, Bird & Brew, restaurant, booking")">
+    <meta name="author" content="Bird & Brew" />
+
+    <!-- Open Graph for social media -->
+    <meta property="og:title" content="@(ViewData["OgTitle"] ?? "Bird & Brew - Comfort Food & Craft Beer")">
+    <meta property="og:description" content="@(ViewData["OgDescription"] ?? "Join us at Bird & Brew for amazing chicken sandwiches and fresh local craft beer.")">
+    <meta property="og:image" content="@Url.Content("~/social-preview.svg")">
+    <meta property="og:url" content="@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@(ViewData["TwitterTitle"] ?? "Bird & Brew - Comfort Food & Craft Beer")">
+    <meta name="twitter:description" content="@(ViewData["TwitterDescription"] ?? "Join us at Bird & Brew for amazing chicken sandwiches and local craft beer.")">
+    <meta name="twitter:image" content="@Url.Content("~/social-preview.svg")">
+    
+    
+    
+    
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/BirdAndBrewMVC.styles.css" asp-append-version="true"/>
+    
 </head>
 <body>
 
