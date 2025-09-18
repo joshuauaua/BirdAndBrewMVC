@@ -29,4 +29,11 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult Error404()
+    {
+        return View();
+    }
+    
+    
 }

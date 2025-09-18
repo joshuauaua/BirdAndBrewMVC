@@ -28,7 +28,10 @@ public class Program
         builder.Services.AddAuthorization();
         
         
+        
         var app = builder.Build();
+
+        app.UseStatusCodePagesWithReExecute("/Home/Error404");
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())

@@ -1,8 +1,15 @@
 @model MenuItem
 
-<div class="card m-2" style="width: 18rem;">
+<div class="card m-2 bg-opacity-50 p-3 " style="width: 20rem;">
     <img class="card-img-top" src="@Model.Image" alt="Card image cap">
-    <h3 class="card-title">@Model.Name</h3>
+    <h3 class="card-title">@Model.Name
+        @if (Model.IsPopular)
+        {
+            <img src="~/popular.svg" alt="Popular Dish" title="Popular Dish" style="width: 3rem";/>
+        }
+    </h3>
+    
     <span class="card-text">@Model.Price  kr</span>
     <span class="card-text">@Model.Description</span>
+    
 </div>
