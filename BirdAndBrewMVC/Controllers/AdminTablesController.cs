@@ -87,7 +87,7 @@ public class AdminTablesController : Controller
     //First get by ID
     [Authorize]
     [HttpGet]
-    public async Task<IActionResult> Update(int id)
+    public async Task<IActionResult> Edit(int id)
     {
         var table = await _client.GetFromJsonAsync<Table>($"tables/{id}");
         
@@ -96,7 +96,7 @@ public class AdminTablesController : Controller
     
     [Authorize]
     [HttpPost]
-    public async Task<IActionResult> UpdatePost(int id, ReadTableVM table)
+    public async Task<IActionResult> EditPost(int id, ReadTableVM table)
     {
         
         var response = await _client.PutAsJsonAsync($"tables/{id}", table);

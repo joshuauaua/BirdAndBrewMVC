@@ -1,16 +1,6 @@
 @model BirdAndBrewMVC.ViewModels.CreateCustomerVM
 
-
 <body class="w-100">
-<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Dashboard</a>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-    <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#">Sign out</a>
-        </li>
-    </ul>
-</nav>
 
 <div class="container-fluid">
     <div class="row">
@@ -18,9 +8,9 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link active" asp-controller="Admin" asp-action="Dashboard">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                            Dashboard 
+                            Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
@@ -30,13 +20,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a asp-controller="AdminMenu" asp-action="Read" class="nav-link">
+                        <a asp-controller="AdminMenu" asp-action="Index" class="nav-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                             Menu
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" asp-controller="AdminCustomers" asp-action="Index">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                             Customers
                         </a>
@@ -54,44 +44,72 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                <h1 class="h2">Customers</h1>
+                <h1 class="h2">Manage Customers</h1>
 
                 <div class="btn-toolbar mb-2 mb-md-0">
 
-                    <button class="btn btn-primary" asp-action="Create"> Create New Customer </button>
+                    <button class="btn btn-primary" asp-controller="AdminCustomers" asp-action="Create"> Add New Customer </button>
 
                 </div>
             </div>
 
-            
-            <form asp-controller="AdminCustomers" asp-action="Create" method="post">
-                <div>
-                    <label asp-for="FirstName" class="form-label mt-2"></label><br/>
-                    <input type="text" asp-for="FirstName" class="form-text mt-2"/>
-                    <span asp-validation-for="FirstName"></span>
-                </div>
-                <div>
-                    <label asp-for="LastName" class="form-label mt-2"></label><br/>
-                    <input type="text" asp-for="LastName" class="form-text mt-2"/>
-                    <span asp-validation-for="LastName"></span>
-                </div>
-                <div>
-                    <label asp-for="EmailAddress" class="form-label mt-2"></label><br/>
-                    <input asp-for="EmailAddress" type="email" class="form-text mt-2"/>
-                    <span asp-validation-for="EmailAddress"></span>
-                </div>
-                <div>
-                    <label asp-for="PhoneNumber" class="form-label mt-2"></label><br/>
-                    <input type="tel" asp-for="PhoneNumber" class="form-text mt-2"/>
-                    <span asp-validation-for="PhoneNumber"></span>
-                </div>
-                
-                <div>
-                    <button type="submit" class="btn btn-primary mt-2">OK</button>
-                    <button type="reset" class="btn btn-secondary mt-2">Cancel</button>
+
+            <div class="container">
+                <div class="py-5 text-left">
+                    <p class="lead">Here you can add a new customer</p>
                 </div>
 
-            </form>
+                <div class="row">
+                    <div class="col-md-8 order-md-1">
+                        <form asp-controller="AdminCustomers" asp-action="Create" method="post" class="needs-validation" >
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label asp-for="FirstName">First Name</label>
+                                    <input asp-for="FirstName" type="text" class="form-control" id="name" placeholder="" value="" required="">
+                                    <span asp-validation-for="FirstName"></span>
+                                    <div class="invalid-feedback">
+                                        Valid Name is Required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label asp-for="LastName">Last Name</label>
+                                    <input asp-for="LastName" type="text" class="form-control" id="name" placeholder="" value="" required="">
+                                    <span asp-validation-for="LastName"></span>
+                                    <div class="invalid-feedback">
+                                        Valid Name is Required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label asp-for="EmailAddress">Email Address</label>
+                                    <input asp-for="EmailAddress" type="email" class="form-control" id="email" placeholder="" value="" required="">
+                                    <span asp-validation-for="EmailAddress"></span>
+                                    <div class="invalid-feedback">
+                                        Valid Email is Required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label asp-for="PhoneNumber">Phone Number</label>
+                                    <input asp-for="PhoneNumber" type="tel" class="form-control" id="phone" placeholder="" value="" required="">
+                                    <span asp-validation-for="PhoneNumber"></span>
+                                    <div class="invalid-feedback">
+                                        Valid Email is Required
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+                            <button type="submit" class="btn btn-primary mt-2">OK</button>
+                            <a asp-action="Index" class="btn btn-secondary mt-2">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
 
         </main>
     </div>
