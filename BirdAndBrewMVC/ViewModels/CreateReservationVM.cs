@@ -11,11 +11,11 @@ public class CreateReservationVM
     
     [Required]
     [Display(Name ="Reservation Date")]
-    public DateTime ReservationDate { get; set; }
+    public DateOnly ReservationDate { get; set; }
     
     [Required]
     [Display(Name ="Reservation Time")]
-    public DateTime ReservationStartTime { get; set; }
+    public TimeOnly ReservationStartTime { get; set; }
     
     [Required]
     [Display(Name ="Customer ID")]

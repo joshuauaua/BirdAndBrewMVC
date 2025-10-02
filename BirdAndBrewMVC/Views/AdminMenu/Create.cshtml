@@ -65,7 +65,7 @@
                         <form asp-controller="AdminMenu" asp-action="Create" method="post" class="needs-validation" >
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label asp-for="Name">Table Number</label>
+                                    <label asp-for="Name">Menu Item</label>
                                     <input asp-for="Name" type="text" class="form-control" id="name" placeholder="" value="" required="">
                                     <span asp-validation-for="Name"></span>
                                     <div class="invalid-feedback">
@@ -76,7 +76,7 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label asp-for="Description">Description</label>
-                                    <input asp-for="Description" type="number" class="form-control" id="text" placeholder="" value="" required="">
+                                    <input asp-for="Description" type="text" class="form-control" id="description" placeholder="" value="" required="">
                                     <span asp-validation-for="Description"></span>
                                     <div class="invalid-feedback">
                                         Valid Description is Required
@@ -86,7 +86,7 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label asp-for="Price">Price</label>
-                                    <input asp-for="Price" type="number" class="form-control" id="number" placeholder="" value="" required="">
+                                    <input asp-for="Price" type="number" class="form-control" id="price" placeholder="" value="" required="">
                                     <span asp-validation-for="Price"></span>
                                     <div class="invalid-feedback">
                                         Valid Price is Required
@@ -96,7 +96,7 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label asp-for="Image">Link to image</label>
-                                    <input asp-for="Image" type="number" class="form-control" id="number" placeholder="" value="">
+                                    <input asp-for="Image" type="text" class="form-control" id="image" placeholder="" value="">
                                     <span asp-validation-for="Image"></span>
                                     <div class="invalid-feedback">
                                         Valid Image Link is Required
