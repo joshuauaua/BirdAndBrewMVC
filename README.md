@@ -61,7 +61,9 @@ The MVC app is designed to connect to a separate ASP.NET Web API project (link w
 
 
   
-
+Sample user login credentials:
+Username = test@test.test
+Password = test
 
 
 
